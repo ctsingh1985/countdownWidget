@@ -1,1 +1,1 @@
-# countdownWidget
+# countdown widget JS implementation
