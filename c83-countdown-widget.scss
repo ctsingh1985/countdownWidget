@@ -1,0 +1,93 @@
+.c83-countdown-widget {
+  // empty
+  //  background: #445f78;
+  text-align: center;
+
+  .content-wrapper {
+    max-width: 107rem;
+
+    .header-01 {
+      font-size: 62px;
+
+      @include respond-to(XSMALL_INVERTED) {
+        font-size: $largeSpacing;
+      }
+    }
+
+    .header-02 {
+      line-height: 1.4;
+    }
+  }
+
+  .text-align {
+    text-align: center;
+  }
+
+  .count-text-margin {
+    margin-bottom: $xSmallSpacing;
+  }
+
+  .countdown-heading-text {
+    text-align: center;
+    padding-top: $normalSpacing;
+    padding-bottom: $normalSpacing;
+    font-weight: 100;
+    color: $colorWhite;
+
+    @include respond-to(XSMALL_INVERTED) {
+      padding-top: $xSmallSpacing;
+      padding-bottom: $xSmallSpacing;
+    }
+  }
+  .js-countdown-text {
+    display: none;
+  }
+  .countdown-text {
+    //  position: relative;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    justify-content: space-between;
+    padding-top: $normalSpacing;
+    padding-bottom: $normalSpacing;
+
+    .countdown-days-text,
+    .countdown-hours-text,
+    .countdown-minutes-text,
+    .countdown-seconds-text {
+      font-size: 3rem;
+    }
+
+    @include respond-to(SMALL_INVERTED) {
+      padding-top: $xSmallSpacing;
+      padding-bottom: $xSmallSpacing;
+
+      > div {
+        margin-bottom: $largeSpacing;
+      }
+
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .countdown-before {
+    display: none;
+  }
+  .countdown-after {
+    display: none;
+  }
+
+  .countdown-update {
+    display: flex;
+    justify-content: center;
+    margin-top: $smallSpacing;
+    margin-bottom: $smallSpacing;
+
+    @include respond-to(SMALL_INVERTED) {
+      .a122-primary-button {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="./c83-countdown-widget.scss">
+<script src="./C83CountdownWidget.ts"></script>
+
+
+  <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+    <!-- START TRANSITION COMPONENT -->
+    <section
+      data-component="c83-countdown-widget" 
+      data-start-date="{{startDate}}" 
+      data-start-time="{{startTime}}" 
+      data-end-date="{{endDate}}" 
+      data-end-time="{{endTime}}" 
+      data-timezone-offset="{{timezoneOffset}}" 
+      class="c83-countdown-widget cp-top-spacing-{{#if topSpacing}}{{topSpacing}}{{^}}default{{/if}} cp-bottom-spacing-{{#if topSpacing}}{{bottomSpacing}}{{^}}default{{/if}} {{#if style}}{{#each style}} style-{{this}}{{/each}}{{^}}style-default{{/if}}"
+      {{#if scrollComponent}}data-scroll-component{{/if}} style="background-color: {{backgroundColor}};">
+      <div class="content-wrapper">
+        <h2 class="heading-title header-01 countdown-heading-text" style="font-weight: {{headingWeight}};">{{heading.title}}</h2>
+        <div class="js-countdown-text">
+          <div class="countdown-text">
+            <div class="countdown-days-column">
+              <div class="countdown-remaining-days text-align count-text-margin header-01"></div>
+              <div class="countdown-days-text header-01">{{heading.daysText}}</div>
+            </div>
+            <div class="countdown-hours-column">
+              <div class="countdown-remaining-hours text-align count-text-margin header-01"></div>
+              <div class="countdown-hours-text header-01">{{heading.hoursText}}</div>
+            </div>
+            <div class="countdown-minutes-column">
+              <div class="countdown-remaining-minutes text-align count-text-margin header-01"></div>
+              <div class="countdown-minutes-text header-01">{{heading.minutesText}}</div>
+            </div>
+            <div class="countdown-seconds-column">
+              <div class="countdown-remaining-seconds text-align count-text-margin header-01"></div>
+              <div class="countdown-seconds-text header-01">{{heading.secondsText}}</div>
+            </div>
+          </div>
+        </div>
+        <h2 class="heading-title header-02 countdown-heading-text countdown-before">{{heading.beforeCountdownMsg}}</h2>
+        <h2 class="heading-title header-02 countdown-heading-text countdown-after">{{heading.afterCountdownMsg}}</h2>
+        <h2 class="heading-title header-02 countdown-heading-text">{{heading.subTitle}}</h2>
+        {{#if countdownUpdate}}
+          <div class="countdown-update">
+            {{> atom/button/a122-primary-button countdownUpdate.cta className='js-countdown-update'}}
+          </div>
+        {{/if}}
+      </div>
+    </section>
+    <!-- END TRANSITION COMPONENT -->
+  </div>
